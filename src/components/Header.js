@@ -1,4 +1,5 @@
 import '../styles/css/header.css';
+import logo from '../assets/img/logo.png';
 
 const Header = () => {
 
@@ -44,7 +45,7 @@ const Header = () => {
       <nav className="header-nav">
         <div className="header-nav-container">
           <a href="#" className="header-nav__logo-container">
-            <img src="https://assets.wprock.fr/emoji/joypixels/512/1f9c1.png" alt="Logo Web" className="header-nav__logo" />
+            <img src={logo} alt="Logo Web" className="header-nav__logo" />
           </a>
           <figure className="header-nav__menu-icon-container" id="headerNavMenuIconContainer">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" className="header-nav__menu-icon">
@@ -53,10 +54,10 @@ const Header = () => {
           </figure>
           <ul className="header-nav__link-list">
             <li className="header-nav__link-item">
-              <a href="#desarrolloWeb" className="header-nav__link">Cupcakes</a>
+              <a href="#Cupcakes" className="header-nav__link">Cupcakes</a>
             </li>
             <li className="header-nav__link-item">
-              <a href="#portafolio" className="header-nav__link">Nosotros</a>
+              <a href="#Nosotros" className="header-nav__link">Nosotros</a>
             </li>
             <li className="header-nav__link-item">
               <a href="https://www.linkedin.com/in/elliotgaramendi/" className="header-nav__link" target="_blank">Elliot</a>
