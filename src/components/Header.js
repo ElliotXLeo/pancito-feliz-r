@@ -1,4 +1,4 @@
-import '../styles/css/header.css';
+import '../styles/css/Headers.css';
 import logo from '../assets/img/logo.png';
 
 const Header = () => {
@@ -60,7 +60,7 @@ const Header = () => {
               <a href="#Nosotros" className="header-nav__link">Nosotros</a>
             </li>
             <li className="header-nav__link-item">
-              <a href="https://www.linkedin.com/in/elliotgaramendi/" className="header-nav__link" target="_blank">Elliot</a>
+              <a href="https://www.linkedin.com/in/elliotgaramendi/" className="header-nav__link header-nav__link--active" target="_blank">Elliot</a>
             </li>
             <li className="header-nav__link-item header-nav__link-item--close-icon-container"
               id="headerNavCloseIconContainer">
