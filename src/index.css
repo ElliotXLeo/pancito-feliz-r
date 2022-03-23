@@ -9,6 +9,7 @@
   --button-color: #61dafb;
   --button-color-active: #fff;
   --button-text-color: #000;
+  --button-text-color-active: #000;
   --padding-section: 2rem 0;
   --padding-container: 0 2rem;
   --primary-highlight: #61dafb;
@@ -23,8 +24,10 @@
   font-family: "Open Sans", sans-serif;
   margin: 0;
   transition: var(--all-transitions);
-  
-  min-height: 200vh;
+}
+
+.main {
+  overflow: hidden;
 }
 
 @media (min-width: 854px) {

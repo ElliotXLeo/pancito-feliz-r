@@ -1,8 +1,14 @@
-import Header from "./components/Header"
+import Header from './components/Header'
+import Home from './pages/home';
 
 const App = () => {
   return (
-    <Header />
+    <>
+      <Header />
+      <main className='main'>
+        <Home />
+      </main>
+    </>
   );
 }
 
