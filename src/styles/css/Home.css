@@ -193,6 +193,7 @@
   }
 
   .hero__message-paragraph {
+    display: flex;
     font-weight: 300;
     margin: 0;
   }

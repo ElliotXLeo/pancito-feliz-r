@@ -1,4 +1,4 @@
-import '../styles/scss/Homes.scss'
+import '../styles/scss/Home.scss'
 
 import heroImg from '../assets/img/hero.jpg';
 import riseImg from '../assets/img/rise.svg';

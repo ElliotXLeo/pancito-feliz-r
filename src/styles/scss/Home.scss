@@ -69,6 +69,7 @@
   &__message-paragraph {
     display: none;
     @include desktop() {
+      display: flex;
       font-weight: 300;
       margin: 0;
     }
