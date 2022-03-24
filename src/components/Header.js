@@ -63,7 +63,7 @@ const Header = () => {
               <NavLink to="/nosotros" className="header-nav__link">Nosotros</NavLink>
             </li>
             <li className="header-nav__link-item">
-              <NavLink to="https://www.linkedin.com/in/elliotgaramendi/" className="header-nav__link header-nav__link--active" target="_blank" rel="noreferrer">Elliot</NavLink>
+              <a href="https://www.linkedin.com/in/elliotgaramendi/" className="header-nav__link header-nav__link--active" target="_blank" rel="noreferrer">Elliot</a>
             </li>
             <li className="header-nav__link-item header-nav__link-item--close-icon-container"
               id="headerNavCloseIconContainer">

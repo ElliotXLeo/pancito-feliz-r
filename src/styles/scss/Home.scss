@@ -48,7 +48,6 @@
   @include d-flex-fd-ai-jc-g(row, center, center, 0);
   position: relative;
   min-height: 100vh;
-
   &__message {
     @include d-flex-fd-ai-jc-g(column, stretch, center, 1rem);
     text-align: center;
@@ -76,7 +75,6 @@
   }
   &__message-shopping-container {
     @include d-flex-fd-ai-jc-g(row, center, center, 2rem);
-
     @include desktop() {
       justify-content: stretch;
     }
@@ -85,6 +83,8 @@
     @include d-flex-fd-ai-jc-g(column, flex-start, center, 0);
   }
   &__message-cheapest-price {
+    font-size: 1.25rem;
+    font-weight: 700;
     &--normal {
       color: var(--shadow-color);
       text-decoration: line-through;
@@ -109,7 +109,6 @@
     border-radius: 50%;
     overflow: hidden;
     margin: 0;
-
     @include desktop() {
       max-width: 640px;
     }
@@ -123,51 +122,42 @@
       @include decorator($top: -5%, $left: 5%, $width: 25%, $transform: translate(-50%, -50%));
     }
   }
-
   &__rise {
     width: 100%;
   }
-
   &__arrow-container {
     @include decorator($top: 50%, $left: 10%, $width: 50%, $transform: translate(-50%, -50%));
     @include desktop() {
       @include decorator($top: 100%, $left: 10%, $width: 50%, $transform: translate(-50%, -50%));
     }
   }
-
   &__arrow {
     width: 100%;
   }
-
   &__bubbles-container {
     @include decorator($top: 50%, $left: 105%, $width: 50%, $transform: translate(-50%, -50%) rotate(180deg));
     @include desktop() {
       @include decorator($top: -5%, $left: 50%, $width: 25%, $transform: translate(-50%, -50%) rotate(90deg));
     }
   }
-
   &__bubbles {
     width: 100%;
   }
-
   &__blob-container {
     @include decorator($top: 100%, $left: 50%, $width: 100%, $transform: translate(-50%, -50%));
     @include desktop() {
       @include decorator($top: 80%, $left: 100%, $width: 100%, $transform: translate(-50%, -50%));
     }
   }
-
   &__blob {
     width: 100%;
   }
-
   &__asterisk-container {
     @include decorator($top: 100%, $left: 50%, $width: 50%, $transform: translate(-50%, -50%));
     @include desktop() {
       @include decorator($top: 80%, $left: 100%, $width: 50%, $transform: translate(-50%, -50%));
     }
   }
-
   &__asterisk {
     width: 100%;
   }
@@ -175,7 +165,6 @@
 .hero-container {
   @include d-flex-fd-ai-jc-g(column, center, center, 2rem);
   @include container();
-
   @include desktop() {
     display: grid;
     grid-template-columns: 1fr 1fr;
