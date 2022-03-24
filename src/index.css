@@ -26,10 +26,6 @@
   transition: var(--all-transitions);
 }
 
-.main {
-  overflow: hidden;
-}
-
 @media (min-width: 854px) {
   :root {
     --padding-container: 0;
