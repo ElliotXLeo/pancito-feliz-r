@@ -3,7 +3,7 @@ import '../styles/css/Cupcakes.css';
 
 const Cupcakes = () => {
 
-  const endpoint = 'http://localhost:3050/cupcakes';
+  const endpoint = `${process.env.REACT_APP_URL_API}/cupcakes`;
 
   const [cupcakes, setCupcakes] = useState([]);
 
