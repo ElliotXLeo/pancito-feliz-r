@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState, useEffect } from 'react';
 import CardCupcake from './CardCupcake';
 
@@ -10,8 +11,11 @@ const CardCupcakes = ({ title, filter }) => {
   useEffect(() => {
     const obtenerData = async () => {
       try {
-        const api = await fetch(endpoint);
-        const data = await api.json();
+        const response = await axios({
+          method: 'GET',
+          url: endpoint
+        });
+        const data = response.data;
         setCupcakes(data);
       } catch (error) {
         console.log(error);
