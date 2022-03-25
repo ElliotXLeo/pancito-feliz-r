@@ -27,7 +27,7 @@ const CardCupcakes = ({ title, filter }) => {
   }, [endpoint]);
 
   return (
-    <section className="cupcakes cupcakes--pt-4">
+    <section className={`cupcakes ${filter ? '' : 'cupcakes--pt-4'}`}>
       <div className="cupcakes-container">
         <h1 className="cupcakes__title">{title}</h1>
         {

@@ -1,5 +1,6 @@
 import CardCupcakes from '../components/cards/CardCupcakes';
 import HeroHome from '../components/heros/HeroHome';
+import Services from '../components/Services';
 import '../styles/scss/Home.scss'
 
 const Home = () => {
@@ -20,6 +21,10 @@ const Home = () => {
       <CardCupcakes
         title="🧁 Chocolate 🧁"
         filter='?sabor_like=Chocolate'
+      />
+      <Services
+        title="🧁 Servicios 🧁"
+        filter=''
       />
     </>
   );
