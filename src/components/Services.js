@@ -1,30 +1,11 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
+import useApi from '../hooks/useApi';
 import Service from './Service';
 
 const Services = ({ title, filter }) => {
 
-  const endpoint = `${process.env.REACT_APP_URL_API}/servicios${filter}`;
+  const recurso = `/servicios${filter}`;
 
-  const [services, setServices] = useState([]);
-
-  useEffect(() => {
-    const obtenerData = async () => {
-      try {
-        const response = await axios({
-          method: 'GET',
-          url: endpoint
-        });
-        const data = response.data;
-        setServices(data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        console.log('Se consultó al API');
-      }
-    };
-    obtenerData();
-  }, [endpoint]);
+  const [services] = useApi(recurso);
 
   return (
     <section className="services">
