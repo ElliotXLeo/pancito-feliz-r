@@ -3,14 +3,14 @@ import CardCupcake from './CardCupcake';
 
 const CardCupcakes = ({ title, filter }) => {
 
-  const endpoint = `${process.env.REACT_APP_URL_API}/cupcakes`;
+  const endpoint = `${process.env.REACT_APP_URL_API}/cupcakes${filter}`;
 
   const [cupcakes, setCupcakes] = useState([]);
 
   useEffect(() => {
     const obtenerData = async () => {
       try {
-        const api = await fetch(`${endpoint}${filter}`);
+        const api = await fetch(endpoint);
         const data = await api.json();
         setCupcakes(data);
       } catch (error) {
@@ -20,7 +20,7 @@ const CardCupcakes = ({ title, filter }) => {
       }
     };
     obtenerData();
-  }, []);
+  }, [endpoint]);
 
   return (
     <section className="cupcakes cupcakes--pt-4">
