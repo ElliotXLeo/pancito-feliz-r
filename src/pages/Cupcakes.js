@@ -1,11 +1,12 @@
-import CardCupcake from "../components/card/CardCupcakes";
+import CardCupcakes from "../components/cards/CardCupcakes";
 import '../styles/css/Cupcakes.css';
 
-
 const Cupcakes = () => {
-
   return (
-    <CardCupcake />
+    <CardCupcakes
+      title='🧁 Cupcakes 🧁'
+      filter=''
+    />
   );
 }
 

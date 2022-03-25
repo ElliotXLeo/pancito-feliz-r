@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import CardCupcake from './CardCupcake';
 
-const CardCupcakes = () => {
+const CardCupcakes = ({ title, filter }) => {
 
   const endpoint = `${process.env.REACT_APP_URL_API}/cupcakes`;
 
@@ -10,7 +10,7 @@ const CardCupcakes = () => {
   useEffect(() => {
     const obtenerData = async () => {
       try {
-        const api = await fetch(endpoint);
+        const api = await fetch(`${endpoint}${filter}`);
         const data = await api.json();
         setCupcakes(data);
       } catch (error) {
@@ -25,7 +25,7 @@ const CardCupcakes = () => {
   return (
     <section className="cupcakes cupcakes--pt-4">
       <div className="cupcakes-container">
-        <h1 className="cupcakes__title">🧁 Cupcakes 🧁</h1>
+        <h1 className="cupcakes__title">{title}</h1>
         {
           cupcakes.length === 0
             ?
