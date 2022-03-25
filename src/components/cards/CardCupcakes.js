@@ -1,6 +1,7 @@
 import Swal from 'sweetalert2';
 import useApi from '../../hooks/useApi';
 import CardCupcake from './CardCupcake';
+import PropTypes from "prop-types";
 
 const CardCupcakes = ({ title, filter }) => {
 
@@ -56,6 +57,11 @@ const CardCupcakes = ({ title, filter }) => {
       </div>
     </section>
   );
+}
+
+CardCupcakes.propTypes = {
+  title: PropTypes.string,
+  filter: PropTypes.string,
 }
 
 export default CardCupcakes;

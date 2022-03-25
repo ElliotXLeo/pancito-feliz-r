@@ -1,6 +1,7 @@
 import {
   Link
 } from 'react-router-dom';
+import PropTypes from "prop-types";
 
 import heroImg from '../../assets/img/hero.jpg';
 import riseImg from '../../assets/img/rise.svg';
@@ -62,6 +63,10 @@ const HeroHome = ({ company }) => {
       </figure>
     </article>
   );
+}
+
+HeroHome.propTypes = {
+  company: PropTypes.object
 }
 
 export default HeroHome;

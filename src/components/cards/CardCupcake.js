@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const CardCupcake = ({ cupcake }) => {
   const { id, sabor, color, descripcion, precio, imagen } = cupcake;
 
@@ -22,6 +24,10 @@ const CardCupcake = ({ cupcake }) => {
       </div>
     </article>
   );
+}
+
+CardCupcake.propTypes = {
+  cupcake: PropTypes.object
 }
 
 export default CardCupcake;
