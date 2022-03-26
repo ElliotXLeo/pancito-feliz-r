@@ -1,7 +1,7 @@
-import CardCupcakes from '../components/cards/CardCupcakes';
 import HeroHome from '../components/heros/HeroHome';
-import Services from '../components/Services';
-import '../styles/scss/Home.scss'
+import CardCupcakes from '../components/cards/CardCupcakes';
+import CardServices from '../components/cards/CardServices';
+import '../styles/scss/Home.scss';
 
 const Home = () => {
 
@@ -19,12 +19,14 @@ const Home = () => {
         company={company}
       />
       <CardCupcakes
-        title="🧁 Chocolate 🧁"
-        filter='?sabor_like=Chocolate'
+        // title="🧁 Chocolate 🧁"
+        title="🧁 Cupcakes 🧁"
+        // filter="?sabor_like=Chocolate"
+        filter=""
       />
-      <Services
+      <CardServices
         title="🧁 Servicios 🧁"
-        filter=''
+        filter=""
       />
     </>
   );

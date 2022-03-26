@@ -9,12 +9,13 @@ const Service = ({ service }) => {
         <p className="services__service-data-about">{id}: {descripcion}</p>
       </div>
       <div className="services__service-button-container">
-        <a className="services__service-button services__service-button--active">Ver</a>
-        <a className="services__service-button">Comprar</a>
+        <button className="services__service-button services__service-button--active">Ver</button>
+        <button className="services__service-button">Comprar</button>
       </div>
     </article>
   );
 }
+
 Service.propTypes = {
   service: PropTypes.object
 }

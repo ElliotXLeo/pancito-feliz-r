@@ -2,28 +2,27 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 
 const useApi = (recurso) => {
+
   const [data, setData] = useState([]);
   const [error, setError] = useState('');
 
-  const endpoint = `${process.env.REACT_APP_URL_API}${recurso}`
+  // const endpoint = `${process.env.REACT_APP_URL_API}${recurso}`;
+  const endpoint = `${process.env.REACT_APP_URL_API}`;
 
   useEffect(() => {
-    const obtenerData = async () => {
+    const getData = async () => {
       try {
-        const response = await axios({
-          method: 'GET',
-          url: endpoint
-        });
+        const response = await axios.get(endpoint);
         const data = response.data;
-        setData(data);
+        setData(data[recurso]);
       } catch (error) {
         setError(error);
       } finally {
-        console.log('Se consultó al API');
+        console.log('Se consultó a la API');
       }
     };
-    obtenerData();
-  }, [endpoint]);
+    getData();
+  }, [endpoint, recurso]);
 
   return ([data, error]);
 }

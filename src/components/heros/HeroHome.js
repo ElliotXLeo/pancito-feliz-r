@@ -2,7 +2,6 @@ import {
   Link
 } from 'react-router-dom';
 import PropTypes from "prop-types";
-
 import heroImg from '../../assets/img/hero.jpg';
 import riseImg from '../../assets/img/rise.svg';
 import arrowImg from '../../assets/img/arrow.svg';
@@ -11,9 +10,11 @@ import blobImg from '../../assets/img/blob.svg';
 import asteriskImg from '../../assets/img/asterisk.svg';
 
 const HeroHome = ({ company }) => {
+
   const { title, subtitle, slogan, priceNormal, priceOffer } = company;
+
   return (
-    <article className="hero">
+    <article className="hero animate__animated animate__fadeIn">
       <div className="hero-container">
         <div className="hero__message">
           <h2 className="hero__message-title">

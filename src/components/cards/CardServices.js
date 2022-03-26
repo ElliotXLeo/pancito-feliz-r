@@ -1,11 +1,12 @@
-import useApi from '../hooks/useApi';
-import Service from './Service';
+import useApi from '../../hooks/useApi';
+import CardService from './CardService';
+import Spinner from '../Spinner';
 import PropTypes from "prop-types";
-import Spinner from './Spinner';
 
 const Services = ({ title, filter }) => {
 
-  const recurso = `/servicios${filter}`;
+  // const recurso = `/servicios${filter}`;
+  const recurso = 'servicios';
 
   const [services] = useApi(recurso);
 
@@ -25,7 +26,7 @@ const Services = ({ title, filter }) => {
                 {
                   services.map((service) => {
                     return (
-                      <Service
+                      <CardService
                         key={service.id}
                         service={service}
                       />
