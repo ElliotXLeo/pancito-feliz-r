@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 
-const CardCupcake = ({ cupcake }) => {
-  const { id, sabor, color, descripcion, precio, imagen } = cupcake;
-
+const CardCupcake = ({ id, sabor, color, descripcion, precio, imagen }) => {
   const formatoMonedaSoles = (valor) => {
     return valor.toLocaleString('es-PE', { style: 'currency', currency: 'PEN', minimumFractionDigits: 2 });
   }
@@ -27,7 +25,17 @@ const CardCupcake = ({ cupcake }) => {
 }
 
 CardCupcake.propTypes = {
-  cupcake: PropTypes.object
+  id: PropTypes.number.isRequired,
+  sabor: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  descripcion: PropTypes.string.isRequired,
+  precio: PropTypes.number,
+  imagen: PropTypes.string
+}
+
+CardCupcake.defaultProps = {
+  imagen: 'https://images.emojiterra.com/google/android-10/512px/1f9c1.png',
+  precio: 0
 }
 
 export default CardCupcake;
