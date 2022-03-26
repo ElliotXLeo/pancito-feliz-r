@@ -2,6 +2,7 @@ import Swal from 'sweetalert2';
 import useApi from '../../hooks/useApi';
 import CardCupcake from './CardCupcake';
 import PropTypes from "prop-types";
+import Spinner from '../Spinner';
 
 const CardCupcakes = ({ title, filter }) => {
 
@@ -23,6 +24,7 @@ const CardCupcakes = ({ title, filter }) => {
       }
     });
   }
+
   return (
     <section className={`cupcakes ${filter ? '' : 'cupcakes--pt-4'}`}>
       <div className="cupcakes-container">
@@ -31,12 +33,7 @@ const CardCupcakes = ({ title, filter }) => {
           cupcakes.length === 0
             ?
             (
-              <section className="spinner">
-                <div className="spinner-container">
-                  <div className="spinner__double-bounce1"></div>
-                  <div className="spinner__double-bounce2"></div>
-                </div>
-              </section>
+              <Spinner />
             )
             :
             (

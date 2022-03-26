@@ -1,6 +1,7 @@
 import useApi from '../hooks/useApi';
 import Service from './Service';
 import PropTypes from "prop-types";
+import Spinner from './Spinner';
 
 const Services = ({ title, filter }) => {
 
@@ -16,12 +17,7 @@ const Services = ({ title, filter }) => {
           services.length === 0
             ?
             (
-              <section className="spinner">
-                <div className="spinner-container">
-                  <div className="spinner__double-bounce1"></div>
-                  <div className="spinner__double-bounce2"></div>
-                </div>
-              </section>
+              <Spinner />
             )
             :
             (
