@@ -23,13 +23,12 @@
   color: var(--button-text-color);
   padding: $padding;
   font-weight: $font-weight;
+  border: 0.125rem solid var(--button-color);
   border-radius: $border-radius;
   transition: var(--all-transitions);
-  border: none;
   &--active,
   &:hover {
     background-color: var(--button-color-active);
-    color: var(--button-text-color-active);
   }
 }
 
@@ -171,6 +170,7 @@
     width: 100%;
   }
 }
+
 .hero-container {
   @include d-flex-fd-ai-jc-g(column, center, center, 2rem);
   @include container();
@@ -184,6 +184,9 @@
   &__title {
     font-size: 2rem;
     margin: 0;
+    text-shadow:
+    0 0 0.25rem var(--primary-highlight),
+    0 0 0.5rem var(--primary-highlight);
   }
   &__services {
     @include d-flex-fd-ai-jc-g(column, center, center, 2rem);

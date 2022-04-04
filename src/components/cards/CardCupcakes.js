@@ -9,7 +9,6 @@ const CardCupcakes = ({ title, filter }) => {
   // const recurso = `/cupcakes${filter}`;
   const recurso = `cupcakes`;
 
-  // const [cupcakes, error] = useApi(recurso);
   const [cupcakes, error] = useApi(recurso);
 
   if (error) {

@@ -18,6 +18,9 @@
 .cupcakes__title {
   font-size: 2rem;
   margin: 0;
+  text-shadow:
+    0 0 0.25rem var(--primary-highlight),
+    0 0 0.5rem var(--primary-highlight);
 }
 
 .cupcakes__cupcakes {
@@ -94,17 +97,19 @@
 }
 
 .cupcakes__cupcake-button {
-  /* text-decoration: none; */
   border: none;
   font-weight: 700;
   background-color: var(--button-color);
   padding: 0.5rem 1rem;
+  border: 0.125rem solid var(--button-color);
   border-radius: 0.5rem;
   color: var(--button-text-color);
+  font-size: 1rem;
   transition: var(--all-transitions);
 }
 
-.cupcakes__cupcake-button--active, .cupcakes__cupcake-button:hover {
+.cupcakes__cupcake-button--active,
+.cupcakes__cupcake-button:hover {
   background-color: var(--button-color-active);
 }
 
